@@ -1,5 +1,5 @@
 <?php
-    
+    session_start();
     echo "<link rel=”stylesheet” type=”text/css” href=”estilo.css” />"
 ?>
 <!DOCTYPE html>
@@ -19,8 +19,6 @@
     <div class="login">
         <img src="imagens/usuario.png" class="usuario" width="100vh" height="100vh" alt="">
         <h1>Login</h1>
-        
-        
         <form name="f_login" method="post" action="login.php">
 
             <p>Usuário</p>
