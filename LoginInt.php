@@ -22,9 +22,9 @@
         <form name="f_login" method="post" action="login.php">
 
             <p>Usuário</p>
-            <input class="name" type="text" name="f_nome" placeholder="Nome de Usuário">
+            <input class="name" type="text" name="f_nome" placeholder="Nome de Usuário" required>
             <p>Senha</p>
-            <input type="password" name="f_senha" placeholder="Insira a Senha">
+            <input type="password" name="f_senha" placeholder="Insira a Senha" required>
             <input type="submit" name="f_btnLogar" value="Login">
             <a class="link" href="cadastrarInt.php">Ainda não possui uma conta?</a>
 
