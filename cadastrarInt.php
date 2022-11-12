@@ -25,12 +25,7 @@ session_start();
                     unset ($_SESSION['msg']);
                 }
                 ?>
-                <?php
-                if(isset($_SESSION['msgnot'])){
-                    echo $_SESSION['msgnot'];
-                    unset ($_SESSION['msgnot']);
-                }
-                ?>
+
                 <div class="label-float">
                     <input type="text" name="f_nome" id="nome" placeholder=""required>
                     <label for="nome">Nome</label>

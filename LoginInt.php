@@ -26,12 +26,6 @@
         }
         ?>
 
-        <?php
-        if(isset($_SESSION['loginerrado'])){
-            echo $_SESSION['loginerrado'];
-            unset ($_SESSION['loginerrado']);
-        }
-        ?>
         <form name="f_login" method="post" action="login.php">
 
             <p>Usuário</p>
