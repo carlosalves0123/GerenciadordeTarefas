@@ -47,7 +47,7 @@ session_start();
                 </div>
 
                 <div class="label-float">
-                    <input type="password" name="f_senha" id="senha" placeholder=""required>
+                    <input type="password" name="f_senha" id="senha" placeholder="" maxlength="16" required>
                     <label for="senha">Senha</label>
                 </div>
 
