@@ -19,6 +19,19 @@
     <div class="login">
         <img src="imagens/usuario.png" class="usuario" width="100vh" height="100vh" alt="">
         <h1>Login</h1>
+        <?php
+        if(isset($_SESSION['msgerro'])){
+                    echo $_SESSION['msgerro'];
+                    unset ($_SESSION['msgerro']);
+        }
+        ?>
+
+        <?php
+        if(isset($_SESSION['loginerrado'])){
+            echo $_SESSION['loginerrado'];
+            unset ($_SESSION['loginerrado']);
+        }
+        ?>
         <form name="f_login" method="post" action="login.php">
 
             <p>Usuário</p>
