@@ -18,5 +18,8 @@
                     unset ($_SESSION['msgteste']);
                 }
         ?>
+
+    <script src="teste.js"></script>
+    
 </body>
 </html>
