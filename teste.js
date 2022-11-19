@@ -1,1 +1,1 @@
-window.alert('tudo ok');
+window.alert('ola');

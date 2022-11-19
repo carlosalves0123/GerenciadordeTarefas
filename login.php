@@ -10,7 +10,7 @@
     $linhas=mysqli_affected_rows($con);
 
     while($registros = mysqli_fetch_array($res)){
-        $id = $registros['id'];
+        $id = $registros['usuarioid'];
         $nome = $registros['nome'];
         $nomeusuario = $registros['username'];
         $email = $registros['email'];
