@@ -1,56 +1,56 @@
 <?php
-    session_start();
     include "conexao.inc";
-    echo "<link rel=”stylesheet” type=”text/css” href=estiloPagPrincipal.css” />"
+   
 ?>
 
-<?php
-
-    
-
-    if(isset($_POST['tarefa'])){
-        $tarefa = filter_input(INPUT_POST, 'tarefa', FILTER_SANITIZE_SPECIAL_CHARS);
-        $query="INSERT INTO tb_tarefas VALUES ('', tarefadescricao, 0, 1";
-        $stm = $con->prepare($query);
-        $stm->bindparam('tarefadescricao', $tarefa);
-        $stm->execute();
-    }
-?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerenciador de Tarefas</title>
-    <style>
-        body{
-            display: flex;
-            background-color: white;
-            height: 60px;
-        }
-
-        form{
-            padding: 10px;
-            border: 2px solid grey;
-            border-radius: 20px;
-        }
-    </style>
+    <title>Tarefas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="estiloPagPrincipal.css">
 </head>
 <body>
-    <form method="POST">
-        Nova Tarefa: <input type="text" name="tarefa">
-        <input type="submit" value="Incluir">
-    </form>
+
+<div class="titulo">
+        <h1>Gerenciador de tarefas</h1>
+    </div>
     
+    <div class="conteudo">
+        <div class="topo">
+            <input type="text" 
+                id="inputNovaTarefa"
+                placeholder="Adicione uma nova tarefa"
+                >
+            <button id="btnAddTarefa">
+                <i class="fa fa-plus"></i>
+            </button>
+        </div>
+
+        <ul id="listaTarefas">
+        </ul>
+    </div>   
+
+    <div id="janelaEdicao">
+        <button id="janelaEdicaoBtnFechar">
+            <i class="fa fa-remove fa-2x"></i>
+        </button>
+        <h2 id="idTarefaEdicao">#1021</h2>
+        <hr>
+        <form>
+            <div class="frm-linha">
+                <label for="nome">Tarefa</label>
+                <input type="text" id="inputTarefaNomeEdicao">
+            </div>
+            <div class="frm-linha">
+                <button id="btnAtualizarTarefa">Salvar</button>
+            </div>
+        </form>
+    </div>
+    <div id="janelaEdicaoFundo"></div>
     
+    <script src="teste.js"></script>
 </body>
 </html>
-
-
-<?php
-        /*if(isset($_SESSION['msgteste'])){
-                    echo $_SESSION['msgteste'];
-                    unset ($_SESSION['msgteste']);
-                }*/
-?>

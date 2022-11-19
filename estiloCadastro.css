@@ -6,6 +6,25 @@
   font-family: 'Roboto', sans-serif;
 }
 
+.titulo{
+  background-color: rgba(0,0,5,0.8);
+  width: 350px;
+  height: 200px;
+  border-radius: 5px 80px 5px 80px;
+  padding: 8px;
+  margin-top: 20px;
+  margin-left: 20px;
+  text-align: center;
+ }
+
+ .titulo > h1{
+  margin: 0;
+  padding: 0;
+  color: white;
+  margin-top: 71px;
+  
+ }
+
 body {
   background-image: url(imagens/aurora-boreal.jpg);
   background-repeat: no-repeat;

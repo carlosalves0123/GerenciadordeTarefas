@@ -1,8 +1,5 @@
 <?php
 session_start();
-
-
-    echo "<link rel=”stylesheet” type=”text/css” href=”estiloCadastro.css” />"
 ?>
 
 <!DOCTYPE html>
